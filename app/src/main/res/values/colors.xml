@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#E64A19</color>
+    <color name="colorPrimaryDark">#E64A19</color>
+    <!--主题颜色-->
+    <color name="colorAccent">#E64A19</color>
+    <!--底部字体颜色-->
+    <color name="tab_text_selector">#E64A19</color>
+    <color name="comment_transparent">#60E64A19</color>
+    <color name="tab_text_unselector">#FFA307</color>
+    <!--底部导航栏线条颜色与背景颜色-->
+    <color name="line_color">#80cccccc</color>
+    <color name="fg_background">#f4f4f4</color>
+    <!--输入框线条颜色、登录按钮以及验证码按钮的颜色-->
+    <color name="et_input_line">#39C6D7</color>
+    <color name="et_input_linenormal">#C4C4C4</color>
+    <!--登陆时进度条界面背景颜色-->
+    <color name="progress_background">#00000000</color>
+    <!--登录界面状态栏颜色-->
+    <color name="login_status_bar">#ffffffff</color>
+    <color name="gray_transparent">#80cccccc</color>
+    <!--所有带点击效果的颜色-->
+    <color name="click_background_normal">#ffffff</color>
+    <color name="click_background_press">#cccccc</color>
+</resources>

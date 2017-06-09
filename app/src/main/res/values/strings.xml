@@ -1,0 +1,19 @@
+<resources>
+    <!--MainActivity-->
+    <string name="app_name">食谱</string>
+    <string name="tab_rb_home">首页</string>
+    <string name="tab_rb_find">发现</string>
+    <string name="tab_rb_circle">收藏</string>
+    <string name="tab_rb_me">我的</string>
+    <!--LoginActivity-->
+    <string name="login_phone_hint">输入手机号</string>
+    <string name="login_verify_hint">输入验证码</string>
+    <string name="login_phone_title">快速登录</string>
+    <string name="login_get_verify">获取验证码</string>
+    <string name="login_button">登录</string>
+    <string name="login_by_account">账号登录</string>
+    <string name="login_to_register">立即注册</string>
+    <string name="login_bottom_stroll">随便逛逛</string>
+
+
+</resources>

@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.LinearLayoutCompat
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    app:divider="@drawable/line"
+    app:showDividers="middle">
+
+    <LinearLayout
+        android:background="@drawable/selector_common_click"
+        android:clickable="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="8dp">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="公历"
+            />
+
+        <TextView
+            android:id="@+id/tv_gregorian_calendar"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="5"
+            android:text="2017年5月1日"
+            />
+    </LinearLayout>
+
+    <LinearLayout
+        android:background="@drawable/selector_common_click"
+        android:clickable="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="8dp">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="农历"
+            />
+
+        <TextView
+            android:id="@+id/tv_chinese_calendar"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="5"
+            android:text="二零一七年 四月(大)初四"
+            />
+    </LinearLayout>
+
+    <LinearLayout
+        android:background="@drawable/selector_common_click"
+        android:clickable="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="8dp">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="节气"
+            />
+
+        <TextView
+            android:id="@+id/tv_solar_terms"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="5"
+            android:text="清明：4月4日 谷雨：4月20日"
+            />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_luck"
+        android:background="@drawable/selector_common_click"
+        android:clickable="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="8dp">
+
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:src="@mipmap/icon_yi"
+            />
+
+        <TextView
+            android:singleLine="true"
+            android:id="@+id/tv_luck"
+            android:layout_gravity="center"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="5"
+            android:text="清明：4月4日 谷雨：4月20日"
+            />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_unlucky"
+        android:background="@drawable/selector_common_click"
+        android:clickable="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="8dp">
+
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:src="@mipmap/icon_ji"
+            />
+
+        <TextView
+            android:singleLine="true"
+            android:id="@+id/tv_unlucky"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="5"
+            android:text="清明：4月4日 谷雨：4月20日"/>
+    </LinearLayout>
+
+</android.support.v7.widget.LinearLayoutCompat>

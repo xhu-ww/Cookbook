@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@mipmap/login_bg"
+              android:orientation="vertical"
+              android:padding="30dp">
+
+    <ImageView
+        android:id="@+id/iv_back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@mipmap/login_close"/>
+
+
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:text="@string/login_phone_title"
+        android:textSize="24sp"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp">
+
+        <ImageView
+            android:id="@+id/iv_phone_clear"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:paddingLeft="10dp"
+            android:paddingRight="5dp"
+            android:paddingTop="10dp"
+            android:src="@mipmap/edittext_clear"
+            android:visibility="invisible"/>
+
+        <android.support.design.widget.TextInputEditText
+            android:id="@+id/et_phone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="20dp"
+            android:layout_toLeftOf="@id/iv_phone_clear"
+            android:background="@null"
+            android:hint="@string/login_phone_hint"
+            android:inputType="phone"
+            android:padding="5dp"/>
+
+        <View
+            android:id="@+id/view_line_phone"
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:layout_below="@id/et_phone"
+            android:background="@drawable/selector_line_focus"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp">
+
+        <TextView
+            android:id="@+id/tv_verify"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/selector_verify"
+            android:enabled="false"
+            android:paddingBottom="5dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:paddingTop="5dp"
+            android:text="@string/login_get_verify"
+            android:textColor="@android:color/white"/>
+
+        <android.support.design.widget.TextInputEditText
+            android:id="@+id/et_verify"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="20dp"
+            android:layout_toLeftOf="@id/tv_verify"
+            android:background="@null"
+            android:hint="@string/login_verify_hint"
+            android:inputType="phone"
+            android:padding="5dp"/>
+
+        <ImageView
+            android:id="@+id/iv_verify_clear"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:layout_toLeftOf="@id/tv_verify"
+            android:paddingLeft="10dp"
+            android:paddingTop="10dp"
+            android:src="@mipmap/edittext_clear"
+            android:visibility="invisible"/>
+
+        <View
+            android:id="@+id/view_line_verify"
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:layout_below="@id/et_verify"
+            android:layout_toLeftOf="@id/tv_verify"
+            android:background="@drawable/selector_line_focus"/>
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/btn_login"
+        android:layout_width="match_parent"
+        android:layout_height="38dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/selector_btn_login"
+        android:clickable="true"
+        android:enabled="false"
+        android:gravity="center"
+        android:padding="10dp"
+        android:textSize="15sp"
+        android:text="@string/login_button"
+        android:textColor="@android:color/white"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:padding="5dp">
+
+        <TextView
+            android:id="@+id/tv_account"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/login_by_account"/>
+
+        <TextView
+            android:id="@+id/tv_register"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:text="@string/login_to_register"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/tv_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/shape_round"
+            android:text="@string/login_bottom_stroll"
+            android:textSize="10sp"/>
+
+        <LinearLayout
+            android:id="@+id/ll_lines"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@id/tv_back"
+            android:layout_marginBottom="10dp"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="1px"
+                android:layout_weight="1"
+                android:background="@drawable/shape_line_left"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:text="or"/>
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="1px"
+                android:layout_weight="1"
+                android:background="@drawable/shape_line_right"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@id/ll_lines"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="10dp">
+
+            <ImageView
+                android:id="@+id/iv_login_qq"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/login_qq"/>
+
+            <ImageView
+                android:id="@+id/iv_login_weibo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:src="@mipmap/login_weibo"/>
+
+            <ImageView
+                android:id="@+id/iv_login_wechat"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/login_wechat"/>
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</LinearLayout>

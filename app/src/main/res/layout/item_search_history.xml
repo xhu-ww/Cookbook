@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="@drawable/shape_search_round"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:clickable="true"
+    android:orientation="vertical"
+    >
+
+    <TextView
+        android:layout_margin="2dp"
+        android:padding="1dp"
+        android:gravity="center"
+        android:layout_gravity="center"
+        android:id="@+id/tv_search_history"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="7dp"
+        android:layout_marginRight="7dp"
+        android:text="家常菜"
+        android:textColor="@color/tab_text_selector"/>
+</LinearLayout>

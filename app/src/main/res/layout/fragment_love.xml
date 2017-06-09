@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/love_title"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="?attr/colorPrimary"
+        android:gravity="center"
+        android:text="我的收藏"
+        android:textColor="@android:color/white"
+        android:textSize="20sp"
+        />
+
+    <TextView
+        android:id="@+id/tv_show_none"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:text="还没有收藏哦"
+        android:textColor="@color/tab_text_selector"
+        android:visibility="gone"
+        />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/love_title">
+
+        <com.nsx.cookbook.widget.NonScrollGridView
+            android:id="@+id/love_gridview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:horizontalSpacing="10dp"
+            android:numColumns="3"
+            android:padding="5dp"
+            android:scrollbars="none"
+            android:verticalSpacing="10dp"/>
+    </ScrollView>
+</RelativeLayout>

@@ -1,0 +1,49 @@
+<resources>
+    /*********************Activity主题*************************/
+    <!-- Base application theme. -->
+    <style name="AppTheme.Base" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="AppTheme" parent="AppTheme.Base"></style>
+    <!--StartActivity的主题-->
+    <style name="NoAction_Full" parent="AppTheme">
+        <item name="android:windowFullscreen">true</item>
+    </style>
+    <!--LoginActivity的主题-->
+    <style name="Background_transparency" parent="AppTheme">
+        <item name="android:background">@android:color/transparent</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:windowIsTranslucent">true</item>
+    </style>
+    /*********************控件样式*************************/
+    <!--底部RadioButton样式-->
+    <style name="table_radiobutton_style">
+        <item name="android:textColor">@color/selector_tab_textcolor</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:button">@null</item>
+        <item name="android:gravity">center</item>
+    </style>
+    <!--对话框基础样式-->
+    <style name="App.Theme.Dialog.Alert" parent="ThemeOverlay.AppCompat.Dialog.Alert">
+        <item name="android:textColorPrimary">@color/tab_text_selector</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:textColor">@color/tab_text_selector</item>
+    </style>
+    <!--食物详细Activity中的样式-->
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar"/>
+
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light"/>
+    <!--进度条对话框样式-->
+    <style name="ProgressDialog">
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowIsFloating">false</item>
+        <item name="android:windowBackground">@color/progress_background</item>
+        <item name="android:windowIsTranslucent">true</item>
+    </style>
+</resources>

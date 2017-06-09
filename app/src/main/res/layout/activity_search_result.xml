@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ll_search_result"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/colorPrimary">
+
+        <ImageView
+            android:id="@+id/search_result_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:src="@mipmap/ic_arrow_back"
+            />
+
+        <TextView
+            android:id="@+id/search_result_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="5dp"
+            android:clickable="true"
+            android:padding="5dp"
+            android:text="搜索"
+            android:textColor="@color/selector_searchresult_textcolor"
+            android:textSize="16sp"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_margin="10dp"
+            android:layout_toLeftOf="@id/search_result_button"
+            android:layout_toRightOf="@id/search_result_back"
+            android:background="@drawable/shape_round_bgwhite"
+            android:focusableInTouchMode="true"
+            android:gravity="center">
+
+            <ImageView
+                android:id="@+id/iv_search_result"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:src="@mipmap/table_search_press"/>
+
+            <ImageView
+                android:id="@+id/search_result_clear"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:padding="5dp"
+                android:paddingLeft="10dp"
+                android:src="@mipmap/edittext_clear"/>
+
+            <EditText
+                android:id="@+id/et_search_result"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_marginLeft="5dp"
+                android:layout_toLeftOf="@id/search_result_clear"
+                android:layout_toRightOf="@id/iv_search_result"
+                android:background="@null"
+                android:hint="输入菜名或食物材料"
+                android:maxLength="15"
+                android:textSize="14sp"/>
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <com.nsx.cookbook.widget.RecyclerRefreshLayout
+        android:id="@+id/search_result_refresh"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/search_result_recyclerview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+    </com.nsx.cookbook.widget.RecyclerRefreshLayout>
+</LinearLayout>
