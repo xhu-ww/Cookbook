@@ -17,10 +17,6 @@ import com.nsx.cookbook.utils.SimpleToast;
 import butterknife.ButterKnife;
 
 
-/**
- * Created by Administrator on 2017/4/17.
- */
-
 public abstract class BaseActivity extends AppCompatActivity {
     /**
      * 日志输出标志

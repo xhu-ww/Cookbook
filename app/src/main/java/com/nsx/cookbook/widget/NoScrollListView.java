@@ -5,7 +5,6 @@ import android.util.AttributeSet;
 import android.widget.ListView;
 
 /**
- * Created by loptop on 2017/4/22.
  * 不可滑动的ListView 此处用于ScrollView + listView
  */
 

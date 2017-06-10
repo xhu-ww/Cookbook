@@ -7,10 +7,6 @@ import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 import retrofit2.converter.scalars.ScalarsConverterFactory;
 
-/**
- * Created by Administrator on 2017/4/19.
- * 基地址不一样 就不行了，但一般一个公司的接口 基地址都相同
- */
 
 public class RetrofitUtils {
     //懒汉式 直接构建对象， 不会存在同步问题

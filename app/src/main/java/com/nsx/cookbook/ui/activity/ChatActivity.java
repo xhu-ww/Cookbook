@@ -25,9 +25,6 @@ import java.util.List;
 import butterknife.BindView;
 import butterknife.OnClick;
 
-/**
- * Created by Administrator on 2017/5/5.
- */
 
 public class ChatActivity extends BaseActivity implements TextView.OnEditorActionListener, TextWatcher {
     TuringRobotModel mOtherNetModel;

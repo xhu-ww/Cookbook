@@ -17,7 +17,6 @@ import retrofit2.Response;
 import retrofit2.Retrofit;
 
 /**
- * Created by Administrator on 2017/4/20.
  * 食谱网络请求
  */
 

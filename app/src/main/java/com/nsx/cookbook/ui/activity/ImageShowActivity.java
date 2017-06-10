@@ -18,9 +18,6 @@ import com.nsx.cookbook.utils.FileUtil;
 import butterknife.BindView;
 import uk.co.senab.photoview.PhotoView;
 
-/**
- * Created by Administrator on 2017/4/24.
- */
 
 public class ImageShowActivity extends BaseActivity implements View.OnLongClickListener {
     @BindView(R.id.iv_food_image)

@@ -8,10 +8,6 @@ import android.support.annotation.NonNull;
 import com.nsx.cookbook.R;
 
 
-/**
- * Created by Administrator on 2017/5/8.
- */
-
 public class DesignProgressDialog extends Dialog{
 
     public DesignProgressDialog(@NonNull Context context) {

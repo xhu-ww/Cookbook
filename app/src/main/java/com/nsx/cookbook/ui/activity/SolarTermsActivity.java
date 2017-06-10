@@ -11,9 +11,6 @@ import com.nsx.cookbook.model.LocalJsonResolutionUtils;
 import butterknife.BindView;
 import butterknife.OnClick;
 
-/**
- * Created by loptop on 2017/5/9.
- */
 
 public class SolarTermsActivity extends BaseActivity {
 

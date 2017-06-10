@@ -12,9 +12,6 @@ import com.nsx.cookbook.base.BaseActivity;
 import butterknife.BindView;
 import butterknife.OnClick;
 
-/**
- * Created by loptop on 2017/4/27.
- */
 
 public class GuideActivity extends BaseActivity implements ViewPager.OnPageChangeListener {
     @BindView(R.id.guide_viewpager)

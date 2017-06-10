@@ -18,9 +18,6 @@ import com.nsx.cookbook.widget.RecyclerRefreshLayout;
 import butterknife.BindView;
 import butterknife.OnClick;
 
-/**
- * Created by loptop on 2017/4/23.
- */
 
 public class FoodListActivity extends BaseActivity implements RecyclerRefreshLayout.SuperRefreshLayoutListener {
 

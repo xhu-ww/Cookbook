@@ -4,7 +4,6 @@ import android.content.Context;
 import android.content.SharedPreferences;
 
 /**
- * Created by Administrator on 2017/4/20.
  * SharedPreferences 存储数据 只能存储基本数据类型
  */
 

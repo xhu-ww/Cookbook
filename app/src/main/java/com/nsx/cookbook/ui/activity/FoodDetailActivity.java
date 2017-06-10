@@ -31,9 +31,6 @@ import java.util.List;
 import butterknife.BindView;
 import butterknife.OnClick;
 
-/**
- * Created by loptop on 2017/4/23.
- */
 
 public class FoodDetailActivity extends BaseActivity {
     //菜谱相关网络请求

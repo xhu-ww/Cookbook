@@ -24,9 +24,6 @@ import java.util.List;
 import butterknife.BindView;
 import butterknife.OnClick;
 
-/**
- * Created by Administrator on 2017/5/5.
- */
 
 public class HistoryActivity extends BaseActivity implements AdapterView.OnItemClickListener {
     @BindView(R.id.history_recyclerview)

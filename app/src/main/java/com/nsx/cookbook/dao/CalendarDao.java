@@ -7,9 +7,6 @@ import android.database.sqlite.SQLiteDatabase;
 
 import com.nsx.cookbook.bean.custom.LocalCalendar;
 
-/**
- * Created by loptop on 2017/5/1.
- */
 
 public class CalendarDao {
     MySqliteOpenHelper mHelper;

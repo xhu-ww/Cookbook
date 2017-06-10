@@ -14,9 +14,6 @@ import com.nsx.cookbook.utils.SimpleToast;
 import butterknife.ButterKnife;
 import butterknife.Unbinder;
 
-/**
- * Created by Administrator on 2017/4/17.
- */
 
 public abstract class BaseFragment extends Fragment {
     /**

@@ -12,9 +12,6 @@ import retrofit2.Response;
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 
-/**
- * Created by Administrator on 2017/5/6.
- */
 
 public class TodayHistoryModel implements ITodayHistoryModel{
     private ITodayHistoryService iTodayHistoryService;

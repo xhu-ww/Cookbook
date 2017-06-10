@@ -1,8 +1,5 @@
 package com.nsx.cookbook.bean.custom;
 
-/**
- * Created by loptop on 2017/5/1.
- */
 
 public class LocalCalendar {
     //记录今天是哪一天

@@ -28,9 +28,6 @@ import java.util.List;
 import butterknife.BindView;
 import butterknife.OnClick;
 
-/**
- * Created by loptop on 2017/4/30.
- */
 
 public class SearchActivity extends BaseActivity implements TextWatcher, TextView.OnEditorActionListener {
     @BindView(R.id.iv_search_text_clear)

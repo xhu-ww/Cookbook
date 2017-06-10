@@ -21,9 +21,6 @@ import java.util.Date;
 
 import butterknife.BindView;
 
-/**
- * Created by loptop on 2017/4/27.
- */
 
 public class WelcomActivity extends BaseActivity implements Runnable {
     @BindView(R.id.iv_welcome_bg)

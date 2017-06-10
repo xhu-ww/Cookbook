@@ -3,9 +3,6 @@ package com.nsx.cookbook.interfaces;
 
 import com.nsx.cookbook.bean.FoodDetailBean;
 
-/**
- * Created by Administrator on 2017/4/21.
- */
 
 public interface ICookbookModel {
 

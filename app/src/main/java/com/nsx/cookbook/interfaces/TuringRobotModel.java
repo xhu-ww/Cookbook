@@ -2,9 +2,6 @@ package com.nsx.cookbook.interfaces;
 
 import com.nsx.cookbook.bean.RobotAnswer;
 
-/**
- * Created by Administrator on 2017/5/5.
- */
 
 public interface TuringRobotModel {
     /**

@@ -2,10 +2,6 @@ package com.nsx.cookbook.bean.custom;
 
 import java.util.List;
 
-/**
- * Created by Administrator on 2017/5/9.
- * 节日 节气都一样
- */
 
 public class Festival {
 

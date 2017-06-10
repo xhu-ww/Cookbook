@@ -17,9 +17,6 @@ import java.util.List;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 
-/**
- * Created by loptop on 2017/4/23.
- */
 
 public class FestivalGridViewAdapter extends BaseAdapter {
     private Context mContext;

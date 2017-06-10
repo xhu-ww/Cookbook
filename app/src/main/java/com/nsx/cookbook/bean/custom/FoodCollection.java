@@ -1,9 +1,5 @@
 package com.nsx.cookbook.bean.custom;
 
-/**
- * Created by Administrator on 2017/5/2.
- * 食谱收藏
- */
 
 public class FoodCollection {
     //菜对应的ID

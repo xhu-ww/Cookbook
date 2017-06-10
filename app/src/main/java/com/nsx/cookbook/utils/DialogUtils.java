@@ -8,9 +8,6 @@ import android.support.v7.app.AlertDialog;
 import com.nsx.cookbook.widget.DesignProgressDialog;
 
 
-/**
- * Created by Administrator on 2017/5/8.
- */
 
 public class DialogUtils {
     //所有的对话框管理

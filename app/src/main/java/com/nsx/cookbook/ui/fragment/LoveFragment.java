@@ -28,9 +28,6 @@ import java.util.List;
 import butterknife.BindView;
 
 
-/**
- * Created by Administrator on 2017/4/17.
- */
 
 public class LoveFragment extends BaseFragment {
 

@@ -13,9 +13,6 @@ import com.nsx.cookbook.bean.FoodDetailBean.ResultBean.ListBean.ProcessBean;
 import java.util.ArrayList;
 import java.util.List;
 
-/**
- * Created by loptop on 2017/4/24.
- */
 
 public class StepViewPagerAdapter extends PagerAdapter {
     //外部传递图片网址集合

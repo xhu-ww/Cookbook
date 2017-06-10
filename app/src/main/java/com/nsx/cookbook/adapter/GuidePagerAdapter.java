@@ -11,9 +11,6 @@ import com.nsx.cookbook.R;
 import java.util.ArrayList;
 import java.util.List;
 
-/**
- * Created by Administrator on 2017/4/21.
- */
 
 public class GuidePagerAdapter extends PagerAdapter{
     //引导页的 页面集合

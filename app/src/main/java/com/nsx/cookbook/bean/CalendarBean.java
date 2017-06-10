@@ -1,8 +1,5 @@
 package com.nsx.cookbook.bean;
 
-/**
- * Created by loptop on 2017/5/1.
- */
 
 public class CalendarBean {
 

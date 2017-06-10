@@ -10,9 +10,6 @@ import com.nsx.cookbook.bean.custom.FoodCollection;
 import java.util.ArrayList;
 import java.util.List;
 
-/**
- * Created by loptop on 2017/5/1.
- */
 
 public class FoodCollectDao {
     MySqliteOpenHelper mHelper;

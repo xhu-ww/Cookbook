@@ -2,9 +2,6 @@ package com.nsx.cookbook.bean;
 
 import java.util.List;
 
-/**
- * Created by loptop on 2017/4/22.
- */
 
 public class FoodDetailBean {
     /**

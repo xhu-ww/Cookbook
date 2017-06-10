@@ -10,12 +10,6 @@ import com.nsx.cookbook.bean.custom.LocalCalendar;
 import java.util.ArrayList;
 import java.util.List;
 
-/**
- * Created by Administrator on 2017/4/17.
- * 共享数据
- * 第三方SDK的初始化
- * 循环遍历退出
- */
 
 public class AppApplication extends Application {
 

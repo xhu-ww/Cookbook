@@ -8,10 +8,6 @@ import com.nsx.cookbook.utils.SimpleToast;
 import retrofit2.Call;
 import retrofit2.Callback;
 
-/**
- * Created by Administrator on 2017/4/20.
- * 网络请求失败处理 统一管理
- */
 
 public abstract class ResponseCallBack<T> implements Callback<T> {
     @Override

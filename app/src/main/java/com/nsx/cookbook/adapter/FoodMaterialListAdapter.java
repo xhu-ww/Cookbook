@@ -15,9 +15,6 @@ import java.util.List;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 
-/**
- * Created by Administrator on 2017/4/21.
- */
 
 public class FoodMaterialListAdapter extends BaseAdapter {
     Context mContext;

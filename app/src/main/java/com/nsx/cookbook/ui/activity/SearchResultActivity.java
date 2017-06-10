@@ -24,9 +24,6 @@ import com.nsx.cookbook.widget.RecyclerRefreshLayout;
 import butterknife.BindView;
 import butterknife.OnClick;
 
-/**
- * Created by loptop on 2017/5/3.
- */
 
 public class SearchResultActivity extends BaseActivity implements TextWatcher, RecyclerRefreshLayout.SuperRefreshLayoutListener {
     @BindView(R.id.et_search_result)

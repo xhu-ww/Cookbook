@@ -18,9 +18,6 @@ import butterknife.BindView;
 import butterknife.OnClick;
 
 
-/**
- * Created by Administrator on 2017/4/17.
- */
 
 public class HomeFragment extends BaseFragment {
 

@@ -16,9 +16,6 @@ import java.util.List;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 
-/**
- * Created by loptop on 2017/4/22.
- */
 
 public class ExpandableListViewAdapter extends BaseExpandableListAdapter {
     private Context mContext;

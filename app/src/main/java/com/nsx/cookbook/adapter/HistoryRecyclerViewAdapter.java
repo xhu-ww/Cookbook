@@ -11,9 +11,6 @@ import com.nsx.cookbook.R;
 import java.util.HashMap;
 import java.util.List;
 
-/**
- * Created by Administrator on 2017/5/8.
- */
 
 public class HistoryRecyclerViewAdapter extends RecyclerView.Adapter<HistoryRecyclerViewAdapter.TimeLineViewHolder> {
 

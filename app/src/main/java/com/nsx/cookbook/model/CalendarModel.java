@@ -14,7 +14,6 @@ import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 
 /**
- * Created by loptop on 2017/5/1.
  * 因为 日历 和 菜谱以及笑话、微信大全的接口来源又是一个公司的
  */
 

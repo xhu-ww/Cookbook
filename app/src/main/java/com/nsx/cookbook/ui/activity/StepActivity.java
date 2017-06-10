@@ -17,9 +17,6 @@ import java.util.List;
 import butterknife.BindView;
 import butterknife.OnClick;
 
-/**
- * Created by Administrator on 2017/4/24.
- */
 
 public class StepActivity extends BaseActivity implements ViewPager.OnPageChangeListener {
     @BindView(R.id.step_title)
