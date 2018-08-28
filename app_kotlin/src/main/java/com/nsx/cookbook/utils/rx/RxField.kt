@@ -17,7 +17,14 @@ private fun <T> DataBindingObservable.toObservable(getter: () -> T): io.reactive
         addOnPropertyChangedCallback(callback)
     }
 
-fun <T> ObservableField<T>.toObservable(): Observable<T?> {
-    return toObservable { get() }
-}
+data class NullableValue<T>(val value: T?)
 
+fun <T> ObservableField<T>.toNullableObservable(): Observable<NullableValue<T>> =
+    toObservable { NullableValue(get()) }
+
+//如果明确知道 ObservableField 内的值不为空 则 传false
+fun <T> ObservableField<T>.toObservable(nullable: Boolean = true): Observable<T> = if (nullable) {
+    toNullableObservable().filter { it.value != null }.map { it.value }
+} else {
+    toObservable { get()!! }
+}
