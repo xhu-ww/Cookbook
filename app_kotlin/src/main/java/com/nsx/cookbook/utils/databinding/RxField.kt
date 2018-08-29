@@ -1,4 +1,4 @@
-package com.nsx.cookbook.utils.rx
+package com.nsx.cookbook.utils.databinding
 
 import android.databinding.ObservableField
 import io.reactivex.Observable

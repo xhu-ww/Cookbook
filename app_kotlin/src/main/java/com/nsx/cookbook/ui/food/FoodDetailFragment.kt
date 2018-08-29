@@ -8,8 +8,9 @@ import android.view.ViewGroup
 import com.nsx.cookbook.R
 import com.nsx.cookbook.base.BaseFragment
 import com.nsx.cookbook.databinding.FragmentFoodDetailBinding
+import com.nsx.cookbook.utils.databinding.setSrc
 import com.nsx.cookbook.utils.rx.bind
-import com.nsx.cookbook.utils.rx.toObservable
+import com.nsx.cookbook.utils.databinding.toObservable
 import org.kodein.di.generic.instance
 
 class FoodDetailFragment : BaseFragment() {
@@ -35,7 +36,9 @@ class FoodDetailFragment : BaseFragment() {
 
         viewModel.food
             .toObservable()
-            .subscribe { binding.food = it }
+            .subscribe {
+                binding.food = it
+            }
             .bind(this)
     }
 }
