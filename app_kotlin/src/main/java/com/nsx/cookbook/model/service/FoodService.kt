@@ -1,9 +1,7 @@
 package com.nsx.cookbook.model.service
 
 import android.support.annotation.IntRange
-import com.nsx.cookbook.app.COOK_APP_KEY
-import com.nsx.cookbook.app.COOK_BASE_URL
-import com.nsx.cookbook.app.DETAIL
+import com.nsx.cookbook.app.*
 import com.nsx.cookbook.model.data.FoodDetailBean
 import com.nsx.cookbook.model.retrofitBuilder
 import io.reactivex.Single
@@ -18,6 +16,14 @@ private interface FoodApi {
         @Query("id") id: Int,
         @Query("appkey") appKey: String
     ): Single<FoodDetailBean>
+
+    @POST(BYCLASSID)
+    fun queryFoodsById(
+        @Query("classid") classid: Int,
+        @Query("start") start: Int,
+        @Query("num") num: Int,
+        @Query("appkey") appkey: String
+    ): Single<FoodDetailBean>
 }
 
 class FoodService {
@@ -28,4 +34,7 @@ class FoodService {
 
     fun getFoodDetail(@IntRange(from = 0) foodId: Int): Single<FoodDetailBean> =
         api.foodDetail(foodId, COOK_APP_KEY)
+
+    fun getFoods(classId: Int, @IntRange(from = 0) page: Int = 0) =
+        api.queryFoodsById(classId, page, PAGE_LIMIT, COOK_APP_KEY)
 }

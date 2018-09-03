@@ -11,3 +11,5 @@ const val BYCLASSID = "byclass"
 const val SEARCH = "search"
 //通过事物ID查询细节
 const val DETAIL = "detail"
+//分页数量
+const val PAGE_LIMIT = 20

@@ -6,6 +6,6 @@ import org.kodein.di.generic.bind
 import org.kodein.di.generic.contexted
 import org.kodein.di.generic.instance
 
-val homeKodein = Kodein.Module {
+val foodKodein = Kodein.Module {
     bind<FoodViewModel>() with contexted<FoodDetailFragment>().viewModel { FoodViewModel(instance()) }
 }

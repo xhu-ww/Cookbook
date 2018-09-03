@@ -4,6 +4,13 @@
     <string name="title_dashboard">Dashboard</string>
     <string name="title_notifications">Notifications</string>
 
+    <string name="state_network_error">网络错误</string>
+    <string name="state_loading">正在加载…</string>
+    <string name="state_not_more">没有更多数据</string>
+    <string name="state_load_error">加载失败</string>
+    <string name="state_refreshing">正在刷新</string>
+    <string name="state_loading_error">数据加载中&#8230;</string>
+
     <string name="food_detail_title">美食详情</string>
     <string name="food_introduction">菜品描述</string>
     <string name="food_tag">菜品标签</string>

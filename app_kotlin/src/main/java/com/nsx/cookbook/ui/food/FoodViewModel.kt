@@ -16,15 +16,40 @@ class FoodViewModel(private val foodService: FoodService) : BaseViewModel() {
 
     val food = ObservableField<Food>()
 
-//    init {
-//        requestFoodDetail(5)
-//    }
+    private var page = 0
 
     fun requestFoodDetail(@IntRange(from = 0) foodId: Int) {
         foodService.getFoodDetail(foodId)
             .map { it.food }
             .async()
             .status(processing)
+            .subscribeBy(
+                onSuccess = food::set,
+                onError = { it.printStackTrace() }
+            )
+            .bind()
+    }
+
+    fun refreshFoods(classId: Int) {
+        foodService.getFoods(classId)
+            .map { it.food }
+            .async()
+            .status(processing)
+            .doOnSuccess { page = 0 }
+            .subscribeBy(
+                onSuccess = food::set,
+                onError = { it.printStackTrace() }
+            )
+            .bind()
+    }
+
+    fun loadMoreFoods(classId: Int) {
+        page++
+        foodService.getFoods(classId)
+            .map { it.food }
+            .async()
+            .status(processing)
+            .doOnError { page-- }
             .subscribeBy(
                 onSuccess = food::set,
                 onError = { it.printStackTrace() }
