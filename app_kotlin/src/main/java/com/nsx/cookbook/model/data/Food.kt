@@ -3,7 +3,7 @@ package com.nsx.cookbook.model.data
 import com.google.gson.annotations.SerializedName
 
 /**
- * 食谱检索 的返回数据类
+ * 食谱检索 以及食谱按分类搜索 返回数据类
  */
 data class FoodSearchBean(
     val status: String,
@@ -32,25 +32,31 @@ data class FoodDetailBean(
  */
 data class Food(
     val id: String,
-    val classid: String,
+    @SerializedName("classid")
+    val classId: String,
     val name: String,
-    val peoplenum: String,
-    val preparetime: String,
-    val cookingtime: String,
+    @SerializedName("peoplenum")
+    val peopleNum: String,
+    @SerializedName("preparetime")
+    val prepareTime: String,
+    @SerializedName("cookingtime")
+    val cookingTime: String,
     val content: String,
     val pic: String,
     val tag: String,
     val material: List<Material>,
-    val process: List<Proces>
+    val process: List<Process>
 )
 
-data class Proces(
-    val pcontent: String,
+data class Process(
+    @SerializedName("pcontent")
+    val processContent: String,
     val pic: String
 )
 
 data class Material(
-    val mname: String,
+    @SerializedName("mname")
+    val name: String,
     val type: String,
     val amount: String
 )

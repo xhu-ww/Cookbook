@@ -10,6 +10,7 @@ import android.util.AttributeSet
 import android.view.MotionEvent
 import android.view.ViewConfiguration
 import com.nsx.cookbook.R
+import com.nsx.cookbook.utils.logInfo
 
 /**
  * 下拉刷新上拉加载控件，目前适用于RecyclerView
@@ -19,7 +20,7 @@ class RecyclerRefreshLayout : SwipeRefreshLayout, SwipeRefreshLayout.OnRefreshLi
     private var recycleView: RecyclerView? = null
     private var touchSlop: Int = 0
     private var onLoading = false
-    private var canLoadMore = false
+    private var canLoadMore = true
     private var hasMore = true
 
     private var yDown: Float = 0F
@@ -54,10 +55,11 @@ class RecyclerRefreshLayout : SwipeRefreshLayout, SwipeRefreshLayout.OnRefreshLi
         if (childCount < 0) return
         var childView = getChildAt(0)
         if (childView !is RecyclerView) {
-            childView = findViewById(0)
+            childView = findViewById(R.id.recyclerView)
         }
         if (childView is RecyclerView) {
-            childView.addOnScrollListener(object : RecyclerView.OnScrollListener() {
+            recycleView = childView
+            recycleView?.addOnScrollListener(object : RecyclerView.OnScrollListener() {
                 override fun onScrolled(recyclerView: RecyclerView?, dx: Int, dy: Int) {
                     if (canLoad() && canLoadMore) loadData()
                 }
@@ -137,13 +139,22 @@ class RecyclerRefreshLayout : SwipeRefreshLayout, SwipeRefreshLayout.OnRefreshLi
     /**
      * 是否是上拉操作
      */
-    private fun isPullUp(): Boolean = yDown - lastY >= touchSlop
+    private fun isPullUp(): Boolean = (yDown - lastY) >= touchSlop
 
     /**
      * 是否可加载更多
      */
     fun setCanLoadMore(canLoadMore: Boolean) {
         this.canLoadMore = canLoadMore
+    }
+
+    /**
+     * 加载完成 后调用
+     */
+    fun onComplete() {
+        setOnLoading(false)
+        isRefreshing = false
+        hasMore = true
     }
 
     fun setRefreshLayoutListener(onRefreshing: () -> Unit = {}, onLoadMore: () -> Unit = {}) {

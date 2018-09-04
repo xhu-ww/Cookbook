@@ -6,6 +6,8 @@ import android.support.v4.app.Fragment
 import com.nsx.cookbook.R
 import com.nsx.cookbook.base.BaseActivity
 import com.nsx.cookbook.ui.food.FoodDetailFragment
+import com.nsx.cookbook.ui.food.FoodMenuFragment
+import com.nsx.cookbook.ui.food.FoodsFragment
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : BaseActivity() {
@@ -18,9 +20,11 @@ class MainActivity : BaseActivity() {
                     return@OnNavigationItemSelectedListener true
                 }
                 R.id.navigation_dashboard -> {
+                    showFragment(FoodsFragment::class.java)
                     return@OnNavigationItemSelectedListener true
                 }
                 R.id.navigation_notifications -> {
+                    showFragment(FoodMenuFragment::class.java)
                     return@OnNavigationItemSelectedListener true
                 }
             }

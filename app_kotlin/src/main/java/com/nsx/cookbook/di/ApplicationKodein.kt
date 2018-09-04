@@ -1,6 +1,7 @@
 package com.nsx.cookbook.di
 
 import android.content.Context
+import android.content.res.AssetManager
 import com.nsx.cookbook.model.service.FoodService
 import com.nsx.cookbook.ui.food.foodKodein
 import org.kodein.di.Kodein
@@ -16,5 +17,6 @@ fun initApplicationKodein(context: Context) {
 
         bind<Context>() with instance(context)
         bind<FoodService>() with singleton { FoodService() }
+        bind<AssetManager>() with singleton { context.assets }
     }
 }

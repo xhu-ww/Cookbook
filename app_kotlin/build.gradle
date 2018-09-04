@@ -77,6 +77,8 @@ dependencies {
     implementation 'org.kodein.di:kodein-di-framework-android:5.0.0'
 
     implementation "android.arch.lifecycle:extensions:1.1.1"
+    // 3D 标签云
+    implementation 'com.moxun:tagcloudlib:1.2.0'
 
     implementation 'com.tencent.bugly:crashreport:latest.release'
     implementation 'com.tencent.bugly:nativecrashreport:latest.release'

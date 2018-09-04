@@ -22,8 +22,8 @@ open abstract class BaseRecyclerAdapter<T>(var context: Context, var viewType: V
         }
     private var state: Int = STATE_HIDE
 
-    private var inflater: LayoutInflater = LayoutInflater.from(context)
-    open var onLoadingHeaderCallBack: OnLoadingHeaderCallBack? = null
+    var inflater: LayoutInflater = LayoutInflater.from(context)
+    var onLoadingHeaderCallBack: OnLoadingHeaderCallBack? = null
 
     var onItemClick: (view: View, item: T, position: Int) -> Unit = { _, _, _ -> }
     var onItemLongClick: (view: View, item: T, position: Int) -> Boolean = { _, _, _ -> true }

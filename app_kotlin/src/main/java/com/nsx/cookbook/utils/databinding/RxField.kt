@@ -1,6 +1,8 @@
 package com.nsx.cookbook.utils.databinding
 
+import android.databinding.ObservableBoolean
 import android.databinding.ObservableField
+import android.databinding.ObservableList
 import io.reactivex.Observable
 import android.databinding.Observable as DataBindingObservable
 
@@ -27,4 +29,45 @@ fun <T> ObservableField<T>.toObservable(nullable: Boolean = true): Observable<T>
     toNullableObservable().filter { it.value != null }.map { it.value }
 } else {
     toObservable { get()!! }
+}
+
+fun ObservableBoolean.toObservable(): Observable<Boolean> = toObservable(this::get)
+
+fun <T> ObservableList<T>.toObservable(): Observable<List<T>> = Observable.create { emitter ->
+    emitter.onNext(this)
+
+    val callback =
+        ObservableListCallback<T> { emitter.onNext(it) }
+    emitter.setCancellable { removeOnListChangedCallback(callback) }
+    addOnListChangedCallback(callback)
+}
+
+private class ObservableListCallback<T>(private val callback: (List<T>) -> Unit) :
+    ObservableList.OnListChangedCallback<ObservableList<T>>() {
+
+    override fun onChanged(sender: ObservableList<T>) {
+        callback(sender)
+    }
+
+    override fun onItemRangeChanged(sender: ObservableList<T>, positionStart: Int, itemCount: Int) {
+        callback(sender)
+    }
+
+    override fun onItemRangeInserted(
+        sender: ObservableList<T>,
+        positionStart: Int, itemCount: Int
+    ) {
+        callback(sender)
+    }
+
+    override fun onItemRangeMoved(
+        sender: ObservableList<T>,
+        fromPosition: Int, toPosition: Int, itemCount: Int
+    ) {
+        callback(sender)
+    }
+
+    override fun onItemRangeRemoved(sender: ObservableList<T>, positionStart: Int, itemCount: Int) {
+        callback(sender)
+    }
 }
