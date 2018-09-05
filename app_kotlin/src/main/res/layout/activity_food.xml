@@ -9,7 +9,11 @@
         android:id="@+id/toolbar"
         android:layout_width="match_parent"
         android:layout_height="?actionBarSize"
+        android:background="@color/main_red"
         android:theme="@style/AppTheme.AppBarOverlay"
+        app:navigationContentDescription="返回"
+        app:navigationIcon="@drawable/ic_arrow_white"
+        app:titleTextColor="@android:color/white"
         tools:title="@string/food_detail_title" />
 
     <FrameLayout
@@ -20,5 +24,4 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/toolbar" />
-
 </android.support.constraint.ConstraintLayout>

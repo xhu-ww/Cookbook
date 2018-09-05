@@ -1,21 +1,63 @@
 <?xml version="1.0" encoding="utf-8"?>
 <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <com.moxun.tagcloudlib.view.TagCloudView
-        android:id="@+id/tagCloud"
+    <android.support.v7.widget.SearchView
+        android:id="@+id/searchView"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_marginBottom="16dp"
-        android:layout_marginEnd="16dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="16dp"
-        app:autoScrollMode="uniform"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_height="36dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/shape_search_view"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:radiusPercent="0.8" />
+        app:queryBackground="@null"
+        app:queryHint="@string/search"
+        app:searchHintIcon="@drawable/ic_search"
+        app:searchIcon="@drawable/ic_search"
+        app:submitBackground="@null" />
+
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/recyclerView"
+        app:layout_constraintHorizontal_weight="1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/searchView">
+
+        <com.nsx.cookbook.widget.MenuListView
+            android:id="@+id/menuListView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:divider="@drawable/linear_divider_line"
+            android:orientation="vertical"
+            android:showDividers="middle"
+            app:drawableLeft="@drawable/shape_shelf_item"
+            app:textBackNormalColor="@android:color/white"
+            app:textBackSelectColor="@color/bg_gray"
+            app:textNormalColor="@color/text_normal_gray"
+            app:textSelectColor="@color/text_selector_red" />
+    </ScrollView>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_weight="2"
+        app:layout_constraintStart_toEndOf="@+id/scrollView"
+        app:layout_constraintTop_toBottomOf="@+id/searchView" />
 </android.support.constraint.ConstraintLayout>

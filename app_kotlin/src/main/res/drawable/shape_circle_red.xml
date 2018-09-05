@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="oval"
+    android:useLevel="false">
+
+    <gradient
+        android:centerColor="@android:color/white"
+        android:endColor="@android:color/white"
+        android:startColor="@android:color/white" />
+    <size
+        android:width="4dp"
+        android:height="4dp" />
+    <padding
+        android:bottom="1dp"
+        android:left="2dp"
+        android:right="2dp"
+        android:top="1dp" />
+
+    <solid android:color="#FF0000" />
+</shape>

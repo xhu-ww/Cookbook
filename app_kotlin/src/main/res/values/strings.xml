@@ -4,6 +4,12 @@
     <string name="title_dashboard">Dashboard</string>
     <string name="title_notifications">Notifications</string>
 
+    <string name="search">搜索</string>
+    <string name="food_search">美食搜索</string>
+    <string name="search_food">输入菜名或食物材料</string>
+    <string name="search_history">历史搜索</string>
+    <string name="search_hot">热门搜索</string>
+
     <string name="state_network_error">网络错误</string>
     <string name="state_loading">正在加载…</string>
     <string name="state_not_more">没有更多数据</string>

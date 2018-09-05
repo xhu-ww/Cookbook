@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <declare-styleable name="MenuListView">
+        <attr name="textNormalColor" />
+        <attr name="textSelectColor" />
+        <attr name="textBackNormalColor" />
+        <attr name="textBackSelectColor" />
+        <attr name="drawableLeft" />
+    </declare-styleable>
+
+</resources>

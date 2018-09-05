@@ -7,6 +7,7 @@ import com.nsx.cookbook.R
 import com.nsx.cookbook.base.BaseActivity
 import com.nsx.cookbook.ui.food.FoodDetailFragment
 import com.nsx.cookbook.ui.food.FoodMenuFragment
+import com.nsx.cookbook.ui.food.FoodSearchFragment
 import com.nsx.cookbook.ui.food.FoodsFragment
 import kotlinx.android.synthetic.main.activity_main.*
 

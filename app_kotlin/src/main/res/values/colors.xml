@@ -5,5 +5,12 @@
     <color name="colorAccent">#FF4081</color>
 
     <color name="main_red">#E64A19</color>
+    <color name="bg_gray">#efefef</color>
     <color name="text_normal_gray">#757575</color>
+    <color name="text_selector_red">#E64A19</color>
+
+    <!--灰色系点击效果-->
+    <color name="click_background_normal">#ffffff</color>
+    <color name="click_background_press">#cccccc</color>
+
 </resources>
