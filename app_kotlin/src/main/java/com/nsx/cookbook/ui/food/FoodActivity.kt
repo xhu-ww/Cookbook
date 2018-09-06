@@ -2,11 +2,17 @@ package com.nsx.cookbook.ui.food
 
 import android.content.Intent
 import android.os.Bundle
+import android.transition.ChangeBounds
+import android.transition.Slide
+import android.view.Gravity
 import android.view.MenuItem
 import com.nsx.cookbook.BuildConfig
 import com.nsx.cookbook.R
 import com.nsx.cookbook.base.BaseActivity
 import com.nsx.cookbook.utils.addFragment
+import android.support.v4.view.MenuItemCompat
+
+
 
 /**
  * @param showSearch 是否展示搜索界面 默认展示
@@ -30,13 +36,29 @@ class FoodActivity : BaseActivity() {
         setSupportActionBar(findViewById(R.id.toolbar))
 
         setTitle(R.string.food_search)
-        supportFragmentManager.addFragment(FoodSearchFragment(), R.id.rootFrameLayout)
+
+        val slideTransition = Slide(Gravity.LEFT)
+        slideTransition.duration = 500
+        val fragment = FoodSearchFragment().apply {
+            reenterTransition = slideTransition
+            exitTransition = slideTransition
+            sharedElementEnterTransition = ChangeBounds()
+        }
+        supportFragmentManager.addFragment(fragment, R.id.rootFrameLayout)
     }
 
-    override fun onOptionsItemSelected(item: MenuItem?): Boolean {
-        if (item?.itemId == android.R.id.home) {
-            onBackPressed()
-        }
-        return super.onOptionsItemSelected(item)
-    }
+//    override fun onOptionsItemSelected(item: MenuItem?): Boolean {
+//        menuInflater.inflate(R.menu.searchview, item)
+//
+//        //找到searchView
+//        val searchItem = menu.findItem(R.id.action_search)
+//        val searchView = MenuItemCompat.getActionView(searchItem) as SearchView
+//
+//        return super.onCreateOptionsMenu(menu)
+//
+//        if (item?.itemId == android.R.id.home) {
+//            onBackPressed()
+//        }
+//        return super.onOptionsItemSelected(item)
+//    }
 }

@@ -13,9 +13,7 @@ import com.nsx.cookbook.model.data.Food
 class FoodsAdapter(context: Context) : BaseRecyclerAdapter<Food>(context, ViewType.ONLY_FOOTER) {
 
     override fun onCreateDefaultViewHolder(parent: ViewGroup, type: Int): RecyclerView.ViewHolder {
-        val binding = DataBindingUtil.inflate<ViewDataBinding>(
-            inflater, R.layout.item_foods, parent, false
-        )
+        val binding = ItemFoodsBinding.inflate(inflater, parent, false)
         return DefaultViewHolder(binding)
     }
 

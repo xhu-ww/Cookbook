@@ -4,6 +4,10 @@
     <string name="title_dashboard">Dashboard</string>
     <string name="title_notifications">Notifications</string>
 
+    <string name="anim_search_view">searchView</string>
+
+    <string name="food_category">美食分类</string>
+
     <string name="search">搜索</string>
     <string name="food_search">美食搜索</string>
     <string name="search_food">输入菜名或食物材料</string>

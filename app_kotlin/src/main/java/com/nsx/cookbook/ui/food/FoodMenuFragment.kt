@@ -2,11 +2,12 @@ package com.nsx.cookbook.ui.food
 
 import android.content.Intent
 import android.os.Bundle
+import android.support.v4.app.ActivityOptionsCompat
+import android.support.v4.util.Pair
 import android.support.v7.widget.LinearLayoutManager
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Toast
 import com.nsx.cookbook.R
 import com.nsx.cookbook.base.BaseFragment
 import com.nsx.cookbook.ui.food.adapter.FoodMenuRightAdapter
@@ -44,7 +45,14 @@ class FoodMenuFragment : BaseFragment() {
         }
 
         searchView.setOnClickListener {
-            startActivity(Intent(activity, FoodActivity::class.java))
+            val transitionActivityOptions =
+                ActivityOptionsCompat.makeSceneTransitionAnimation(
+                    activity!!, Pair(searchView, getString(R.string.anim_search_view))
+                )
+
+            startActivity(
+                Intent(activity, FoodActivity::class.java), transitionActivityOptions.toBundle()
+            )
         }
 
         viewModel.foodMenu

@@ -3,6 +3,7 @@ package com.nsx.cookbook.ui.food.adapter
 import android.content.Context
 import android.databinding.DataBindingUtil
 import android.support.v7.widget.RecyclerView
+import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.nsx.cookbook.R
@@ -17,9 +18,7 @@ class FoodMenuRightAdapter(context: Context) :
     Unit = { _, _, _ -> }
 
     override fun onCreateDefaultViewHolder(parent: ViewGroup, type: Int): RecyclerView.ViewHolder {
-        val binding = DataBindingUtil.inflate<ItemMenuRightBinding>(
-            inflater, R.layout.item_menu_right, parent, false
-        )
+        val binding = ItemMenuRightBinding.inflate(inflater, parent, false)
         return DefaultViewHolder(binding)
     }
 

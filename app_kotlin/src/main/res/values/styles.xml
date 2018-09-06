@@ -8,6 +8,9 @@
         <item name="colorAccent">@color/main_red</item>
         <item name="android:textSize">14sp</item>
         <item name="android:textColor">@color/text_normal_gray</item>
+        <item name="android:windowContentTransitions">true</item>
+        <item name="android:windowAllowEnterTransitionOverlap">false</item>
+        <item name="android:windowAllowReturnTransitionOverlap">false</item>
     </style>
 
     <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.ActionBar">
