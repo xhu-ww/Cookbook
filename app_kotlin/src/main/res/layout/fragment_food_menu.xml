@@ -5,8 +5,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <android.support.v7.widget.SearchView
-        android:id="@+id/searchView"
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/searchLayout"
         android:layout_width="match_parent"
         android:layout_height="36dp"
         android:layout_marginEnd="8dp"
@@ -15,12 +15,32 @@
         android:background="@drawable/shape_search_view"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:queryBackground="@null"
-        app:queryHint="@string/search"
-        app:searchHintIcon="@drawable/ic_search"
-        app:searchIcon="@drawable/ic_search"
-        app:submitBackground="@null" />
+        app:layout_constraintTop_toTopOf="parent">
+
+        <android.support.v7.widget.SearchView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:clickable="false"
+            android:focusable="false"
+            app:closeIcon="@null"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:queryBackground="@null"
+            app:queryHint="@string/search"
+            app:searchHintIcon="@drawable/ic_search"
+            app:searchIcon="@drawable/ic_search"
+            app:submitBackground="@null" />
+
+        <View
+            android:id="@+id/search"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </android.support.constraint.ConstraintLayout>
 
     <ScrollView
         android:id="@+id/scrollView"
@@ -31,7 +51,7 @@
         app:layout_constraintEnd_toStartOf="@+id/recyclerView"
         app:layout_constraintHorizontal_weight="1"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/searchView">
+        app:layout_constraintTop_toBottomOf="@+id/searchLayout">
 
         <com.nsx.cookbook.widget.MenuListView
             android:id="@+id/menuListView"
@@ -59,5 +79,5 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_weight="2"
         app:layout_constraintStart_toEndOf="@+id/scrollView"
-        app:layout_constraintTop_toBottomOf="@+id/searchView" />
+        app:layout_constraintTop_toBottomOf="@+id/searchLayout" />
 </android.support.constraint.ConstraintLayout>

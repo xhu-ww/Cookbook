@@ -20,7 +20,8 @@
         android:theme="@style/AppTheme">
         <activity
             android:name=".ui.MainActivity"
-            android:label="@string/food_category">
+            android:label="@string/food_category"
+            android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -28,7 +29,10 @@
             </intent-filter>
         </activity>
 
-        <activity android:name=".ui.food.FoodActivity" />
+        <activity
+            android:name=".ui.food.FoodActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" />
     </application>
 
 </manifest>

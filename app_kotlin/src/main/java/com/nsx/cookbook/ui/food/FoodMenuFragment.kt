@@ -31,6 +31,17 @@ class FoodMenuFragment : BaseFragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+        search.setOnClickListener {
+            val transitionActivityOptions =
+                ActivityOptionsCompat.makeSceneTransitionAnimation(
+                    activity!!, Pair(searchLayout, getString(R.string.anim_search_view))
+                )
+
+            startActivity(
+                Intent(activity, FoodActivity::class.java), transitionActivityOptions.toBundle()
+            )
+        }
+
         //右边菜单
         val adapter = FoodMenuRightAdapter(context!!)
         adapter.onChildItemClick = { _, _, name ->
@@ -42,17 +53,6 @@ class FoodMenuFragment : BaseFragment() {
         //左侧菜单
         menuListView.onItemClick = { _, parentMenu, _ ->
             adapter.items = parentMenu.list
-        }
-
-        searchView.setOnClickListener {
-            val transitionActivityOptions =
-                ActivityOptionsCompat.makeSceneTransitionAnimation(
-                    activity!!, Pair(searchView, getString(R.string.anim_search_view))
-                )
-
-            startActivity(
-                Intent(activity, FoodActivity::class.java), transitionActivityOptions.toBundle()
-            )
         }
 
         viewModel.foodMenu
